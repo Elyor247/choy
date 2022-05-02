@@ -1,0 +1,170 @@
+@import "fontawesome.scss";
+@import "solid.scss";
+@import "brands.scss";
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, #05070b, #17171d);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.choy_text {
+    margin-top: -15px;
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+    font-family: Nunito Sans, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #818999;
+    font-weight: 300;
+    line-height: 1.8em;
+    margin-left: 25px;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    user-select: none;
+    font-family: 'Pacifico', cursive;
+}
+
+.mySwiper {
+    position: relative;
+}
+
+.swiper .swiper_text {
+    font-size: 110px;
+    line-height: 14px;
+    margin-top: -300px;
+    margin-left: 530px;
+    z-index: 2;
+    transform: translate(50%, 50%);
+    position: absolute;
+    color: #fff;
+    cursor: grab;
+    opacity: 0.9;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 140%;
+    height: 100%;
+    margin-top: -26px;
+    margin-left: -70px;
+}
+
+.gutter {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-left: 0.5625em;
+}
+
+.button {
+    font-size: 1em;
+    padding: 0.375em 1.125em;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: inherit;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 1.6875rem;
+    border: 2px solid transparent;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.button--primary {
+    color: #fff;
+    background-color: #ed145b;
+    &:hover {
+        transition: .5s;
+        opacity: 0.7;
+        color: white;
+    }
+}
+
+.button--hollow {
+    color: #fff;
+    border-color: #969fb3;
+    &:hover {
+        transition: .5s;
+        opacity: 1.5;
+        border-color: #fff;
+        color: #fff;
+    }
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    margin-top: 300px;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 5;
+    border: 0;
+    left: 50px;
+    top: -40px;
+    color: #818999;
+    &:hover {
+        transition: .5s;
+        color: white;
+    }
+    @extend %fa-icon;
+    @extend .fas;
+    &:before {
+        content: fa-content($fa-var-arrow-circle-left);
+    }
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-next {
+    margin-top: 300px;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #818999;
+    z-index: 5;
+    border: 0;
+    right: 50px;
+    top: -40px;
+    &:hover {
+        transition: .5s;
+        color: white;
+    }
+    @include fa-icon;
+    @extend .fas;
+    &:before {
+        content: fa-content($fa-var-arrow-circle-right);
+    }
+    &:after {
+        display: none;
+    }
+}
